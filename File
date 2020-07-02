@@ -1,0 +1,9 @@
+<%for(let i=1;i<=rows;i++){%>
+        <div class="row">
+            <%for(let j=1;j<=cols;j++){%>
+                <div class="col" contenteditable="true">
+                    <%=i + "-" + String.fromCharCode(65+j)%>
+                </div>
+                <%}%>
+        </div>
+        <%}%>

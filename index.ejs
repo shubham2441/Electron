@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- <h1>First Electron App</h1> -->
+
+<body>
+
+    <div class="Menu"> Menu</div>
+    <div class="MenuOptions"> Menu Options</div>
+    <div class="FormulaBar">Fomula Bar
+        <input type="text" id="address-container">
+        <input type="text">
+    </div>
+    <div class="CellContainer">
+        <div id="top-left-cell" class="top-left-cell">
+        </div>
+        <div class="top-row" id=top-row>
+            <% for(let j=0;j<cols;j++){%>
+                <div class="cell">
+                    <%=String.fromCharCode(65+j)%>
+                </div>
+                <%}%>
+        </div>
+        <div class="left-col" id="left-col">
+            <% for(let i=1;i<=rows;i++){%>
+                <div class="cell">
+                    <%=i%>
+                </div>
+                <%}%>
+        </div>
+        <div class="grid" id="grid">
+            <%for(let i=0;i<rows;i++){%>
+                <div class="row">
+                    <%for(let j=0;j<cols;j++){%>
+                        <div class="cell" contenteditable="true" ri=<%=i%> ci=
+                            <%=j%>>
+                                <!-- <%=i + "-" + String.fromCharCode(65+j)%> -->
+                        </div>
+                        <%}%>
+                </div>
+                <%}%>
+        </div>
+    </div>
+    <div class="Sheets ">
+        Sheets
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
