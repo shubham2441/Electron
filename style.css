@@ -2,21 +2,46 @@ html,
 body {
     margin: 0px;
     padding: 0px;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 1rem;
 }
 
 * {
     box-sizing: border-box;
 }
-
+.ib{
+    display: inline-block;
+}
+/* Menu Bar */
 .Menu {
     height: 22px;
     border: 1px solid red;
 }
+.menu-items{
+    width: 45px;
+    font-size: 90%;
+    text-align: center;
+}
+.menu-options-item{
+    display: none;
+}
 
-.MenuOptions {
+.selected{
+    display: block;
+}
+
+#File-options>div{
+    width: 50px;
+    text-align: center;
+}
+
+.menu-options {
     height: 56px;
     border: 1px solid green;
 }
+
+/* Formula */
 
 .FormulaBar {
     height: 26px;
